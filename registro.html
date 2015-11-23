@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 	
+<!--Para que podamos usar acentos y caracteres raros -->
+<head><title> Registro </title>
+	
+<script>
+function vervalores(){
+var sAux="";
+var frm = document.getElementById("registro"); for (i=1;i<frm.elements.length;i++)
+{
+sAux += "NOMBRE: " + frm.elements[i].name + " "; sAux += "VALOR: " + frm.elements[i].value + "\n" ;
+} alert(sAux);
+} 
+</script>	
+	
+	
+</head>
+
+<body style="background-color: lightgrey"> 
+
+<form id='registro' onSubmit='vervalores()'>	
+	
+  <form>
+  Nombre y apellidos:<br>
+  <input type="text" id="nombreCompleto">
+  <br>
+  Password:<br>
+  <input type="password" id="pass">
+  <br>
+  Teléfono:<br>
+  <input type="tel" id="numero">
+  <br>
+  Especialidad:<br>
+  <select id="especialidad">
+	  <option> Ingeniería de Computadores </option>
+	  <option> Ingenieria del Software </option>
+	  <option> Computación </option>
+  </select>
+  <br>
+  <div>
+	  
+	Añade una fotografía <br> 
+	 
+  <input type="file" id="foto" > 
+  </div>
+  
+  <input type="submit">
+	
+</body> </html>
